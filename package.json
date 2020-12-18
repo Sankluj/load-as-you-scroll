@@ -1,0 +1,22 @@
+{
+  "name": "@sankluj/load-as-you-scroll",
+  "version": "0.1.0",
+  "description": "Display array elements as you scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sankluj/load-as-you-scroll.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "sankluj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sankluj/load-as-you-scroll/issues"
+  },
+  "homepage": "https://github.com/Sankluj/load-as-you-scroll#readme"
+}
