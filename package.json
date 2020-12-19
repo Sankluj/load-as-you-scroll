@@ -1,6 +1,6 @@
 {
   "name": "@sankluj/load-as-you-scroll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display array elements as you scroll",
   "main": "index.js",
   "scripts": {
