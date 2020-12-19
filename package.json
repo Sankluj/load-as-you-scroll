@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Sankluj/load-as-you-scroll/issues"
   },
-  "homepage": "https://github.com/Sankluj/load-as-you-scroll#readme"
+  "homepage": "https://github.com/Sankluj/load-as-you-scroll#readme",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  }
 }
