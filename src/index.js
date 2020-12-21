@@ -11,7 +11,7 @@ import { useState, useCallback, useEffect } from "react";
  *   @return {array|undefined} elementSubset: subset of elements array
  */
 export default (elements = [], { step = 10, isDebug = false } = {}) => {
-  if (!Array.isArray(elements)) return [null];
+  if (!Array.isArray(elements)) return [null, null];
 
   const [currentStep, setStep] = useState(step);
 
