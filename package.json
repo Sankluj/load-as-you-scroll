@@ -2,8 +2,11 @@
   "name": "@sankluj/load-as-you-scroll",
   "version": "0.1.1",
   "description": "Display array elements as you scroll",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +25,12 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "rollup": "^2.35.1"
+  },
+  "files": [
+    "dist"
+  ]
 }
