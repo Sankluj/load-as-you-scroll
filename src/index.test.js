@@ -27,26 +27,23 @@ const Component = ({ elements }) => {
 describe("useScrollStepper", () => {
   beforeEach(() => {
     const observe = jest.fn();
-    const unobserve = jest.fn();
+    const disconnect = jest.fn();
 
-    // you can also pass the mock implementation
-    // to jest.fn as an argument
     window.IntersectionObserver = jest.fn(() => ({
       observe,
-      unobserve,
+      disconnect,
     }));
   });
 
-  it("should return null if the first parameter is not an array", () => {
+  it("should throw an error if the first parameter is not an array", () => {
     //GIVEN
     const elements = null;
 
-    //WHEN
-    const [ref, eltsSubset] = useScrollStepper(elements);
+    // WHEN
+    const componentRenderer = () => render(<Component elements={elements} />);
 
     //THEN
-    expect(ref).toEqual(null);
-    expect(eltsSubset).toEqual(null);
+    expect(componentRenderer).toThrow("elements is not an array");
   });
 
   it("should return a sub array of ten elements when the first parameter is an array of more than 10 elements", () => {
@@ -54,7 +51,7 @@ describe("useScrollStepper", () => {
     const elements = [...Array(5000)];
 
     //WHEN
-    const { container } = render(<Component elements={elements} />);
+    render(<Component elements={elements} />);
 
     //THEN
     const displayedElts = screen.getAllByTestId("element");

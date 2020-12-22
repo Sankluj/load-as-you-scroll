@@ -1,6 +1,6 @@
 import pkg from "./package.json";
 
-export default {
+const config = {
   input: "src/index.js",
   output: [
     {
@@ -16,3 +16,5 @@ export default {
   ],
   external: ["react"],
 };
+
+export default config;

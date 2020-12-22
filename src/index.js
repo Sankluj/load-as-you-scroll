@@ -10,8 +10,11 @@ import { useState, useCallback, useEffect } from "react";
  *   @return {function|null} ref: function registering the reference of a DOM element
  *   @return {array|undefined} elementSubset: subset of elements array
  */
-export default (elements = [], { step = 10, isDebug = false } = {}) => {
-  if (!Array.isArray(elements)) return [null, null];
+const useScrollStepper = (
+  elements = [],
+  { step = 10, isDebug = false } = {}
+) => {
+  if (!Array.isArray(elements)) throw new Error("elements is not an array");
 
   const [currentStep, setStep] = useState(step);
 
@@ -47,3 +50,5 @@ export default (elements = [], { step = 10, isDebug = false } = {}) => {
 
   return [ref, elements.slice(0, currentStep)];
 };
+
+export default useScrollStepper;
